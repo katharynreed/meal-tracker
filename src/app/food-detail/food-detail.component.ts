@@ -11,6 +11,8 @@ export class FoodDetailComponent {
   @Input() childFoodList: Food[];
   @Output() editClicker = new EventEmitter();
 
+  filterByCalories: string = "showAll";
+
   editFoodHasBeenClicked(foodToEdit: Food) {
     this.editClicker.emit(foodToEdit);
   }
@@ -21,6 +23,10 @@ export class FoodDetailComponent {
     } else if (food.calories > 500) {
       return "bg-danger";
     }
+  }
+
+  onChange(optionFromMenu) {
+    this.filterByCalories = optionFromMenu;
   }
 
 

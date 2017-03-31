@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { NewFoodComponent } from './new-food/new-food.component';
 import { FoodDetailComponent } from './food-detail/food-detail.component';
 import { EditFoodComponent } from './edit-food/edit-food.component';
+import { CaloriePipe } from './calorie.pipe';
 
 @NgModule({
   declarations: [
