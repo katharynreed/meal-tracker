@@ -20,7 +20,7 @@ export class FoodDetailComponent {
   calorieFiltration(food) {
     if (food.calories < 500) {
       return "bg-success";
-    } else if (food.calories > 500) {
+    } else if (food.calories >= 500) {
       return "bg-danger";
     }
   }
