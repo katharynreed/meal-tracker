@@ -17,8 +17,7 @@ export class AppComponent {
   ];
 
   showNewFood() {
-    this.newFood = true;
-  }
+    this.newFood = true;  }
 
   trackNewFood(params) {
     var newFood = new Food(params.name, params.details, params.calories);

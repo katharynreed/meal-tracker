@@ -17,7 +17,11 @@ export class NewFoodComponent {
       "details": details,
       "calories": calories
     }
-    this.addClicker.emit(params);
+    if (params.name === "" || params.calories === "") {
+      alert('Please enter required information to track food');
+    } else {
+      this.addClicker.emit(params);
+    }
   }
 
   showNewFoodForm() {
