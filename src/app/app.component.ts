@@ -11,9 +11,9 @@ export class AppComponent {
   selectedFood = null;
 
   masterFoods: Food[] = [
-    new Food ('Big Mac', 'I wish it were a Bigger Mac', 540);
-    new Food ('McFries', 'I only got a medium #sad', 330);
-    new Food ('Hi-C Orange Lavaburst', 'it was just so orange', 220);
+    new Food ('Big Mac', 'I wish it were a Bigger Mac', 540),
+    new Food ('McFries', 'I only got a medium #sad', 330),
+    new Food ('Hi-C Orange Lavaburst', 'it was just so orange', 220),
   ];
 
   showNewFood() {
