@@ -14,7 +14,8 @@ import { CaloriePipe } from './calorie.pipe';
     AppComponent,
     NewFoodComponent,
     FoodDetailComponent,
-    EditFoodComponent
+    EditFoodComponent,
+    CaloriePipe
   ],
   imports: [
     BrowserModule,
