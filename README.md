@@ -1,6 +1,6 @@
 # MealTracker
 
-
+Meal Tracker does what no app has done before -- track your food! (Just kidding, tons of apps do that. But this one is special. This one was used to learn basic implementation of piping and separation of logic in the context of Angular.)
 
 ## Prerequisites
 
