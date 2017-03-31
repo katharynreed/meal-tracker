@@ -1,15 +1,26 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Output, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-new-food',
   templateUrl: './new-food.component.html',
   styleUrls: ['./new-food.component.css']
 })
-export class NewFoodComponent implements OnInit {
+export class NewFoodComponent {
+  @Output() addClicker = new EventEmitter();
+  @Output() showClicker = new EventEmitter();
 
-  constructor() { }
+  newFood = false;
 
-  ngOnInit() {
+  addFoodHasBeenClicked(food, details, calories) {
+    var params = {
+      "food": food,
+      "details": details,
+      "calories": calories
+    }
+    this.addClicker.emit(params);
   }
 
+  showNewFoodForm() {
+    this.newFood = true;
+  }
 }
