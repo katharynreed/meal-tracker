@@ -20,6 +20,11 @@ export class AppComponent {
     this.newFood = true;
   }
 
+  trackNewFood(params) {
+    var newFood = new Food(params.name, params.details, params.calories);
+    this.masterFoods.push(newFood);
+  }
+
   editFood(food) {
     this.selectedFood = food;
   }
