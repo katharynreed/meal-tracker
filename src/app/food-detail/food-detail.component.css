@@ -1,0 +1,10 @@
+.btn-xs {
+  background: none;
+  border: none;
+  color: hotpink;
+}
+
+.btn-xs:hover {
+  text-decoration: underline;
+  color: pink;
+}
