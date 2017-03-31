@@ -9,6 +9,7 @@ import { Food } from './food.model';
 export class AppComponent {
   newFood = false;
   selectedFood = null;
+  editFoodSelected = null;
 
   masterFoods: Food[] = [
     new Food ('Big Mac', 'I wish it were a Bigger Mac', 540),
@@ -26,9 +27,12 @@ export class AppComponent {
 
   editFood(food) {
     this.selectedFood = food;
+    this.editFoodSelected = true;
   }
 
   finishedEditing() {
     this.selectedFood = null;
+    this.editFoodSelected = null;
+
   }
 }

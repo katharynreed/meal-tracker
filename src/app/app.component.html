@@ -1,12 +1,23 @@
 <div class="container">
-  <h1 id="app-title">Food Tracker</h1>
-  <div class="row">
-    <div class="col-md-4">
-      <app-food-detail [childFoodList]='masterFoods' (editClicker)="editFood($event)">Loading...</app-food-detail>
-      <app-new-food (addClicker)="trackNewFood($event)" (showClicker)="showNewFood($event)">Loading...</app-new-food>
-    </div>
-    <div class="col-md-8">
-      <app-edit-food [childSelectedFood]="selectedFood" (doneButtonClickedSender)="finishedEditing()">Loading...</app-edit-food>
+  <div class="panel panel-default">
+    <h1 id="app-title">Food Tracker</h1>
+    <hr>
+    <div class="content">
+      <div *ngIf="editFoodSelected">
+        <div class="row">
+          <div class="col-md-8">
+            <app-food-detail [childFoodList]='masterFoods' (editClicker)="editFood($event)">Loading...</app-food-detail>
+            <app-new-food (addClicker)="trackNewFood($event)" (showClicker)="showNewFood($event)">Loading...</app-new-food>
+          </div>
+          <div class="col-md-4">
+            <app-edit-food [childSelectedFood]="selectedFood" (doneButtonClickedSender)="finishedEditing()">Loading...</app-edit-food>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="editFoodSelected === null">
+        <app-food-detail [childFoodList]='masterFoods' (editClicker)="editFood($event)">Loading...</app-food-detail>
+        <app-new-food (addClicker)="trackNewFood($event)" (showClicker)="showNewFood($event)">Loading...</app-new-food>  
+      </div>
     </div>
   </div>
 </div>

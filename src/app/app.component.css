@@ -1,9 +1,18 @@
+hr {
+  max-width: 700px;
+}
+
+.content {
+  padding: 55px;
+}
+
+.panel {
+  margin-top: 50px;
+}
+
 #app-title {
   text-align: center;
   font-size: 50px;
   text-transform: uppercase;
-}
-
-.btn {
-  background: none;
+  padding-top: 20px;
 }

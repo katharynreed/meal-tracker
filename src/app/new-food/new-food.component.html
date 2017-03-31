@@ -1,10 +1,10 @@
   <button id="show-new-food-form" class="btn" (click)='showNewFoodForm()'>Track a Food</button>
 <div *ngIf='newFood'>
   <label for="name">Food:</label>
-  <input required #name><br/>
+  <input class="form-control" #name><br/>
   <label for="details">Food Details:</label>
-  <input #details><br/>
+  <input class="form-control" #details><br/>
   <label for="food">Calories:</label>
-  <input #calories><br/>
+  <input class="form-control" #calories><br/>
   <button class="btn" (click)="addFoodHasBeenClicked(name.value, details.value, calories.value); name.value = ''; details.value = ''; calories.value = '';">Track Food</button>
 </div>

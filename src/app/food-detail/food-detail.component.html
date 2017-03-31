@@ -1,11 +1,11 @@
-<select (change)="onChange($event.target.value)">
+<select class="form-control"(change)="onChange($event.target.value)">
   <option value="allFoods" selected="selected">All Foods</option>
   <option value="lowCalorieFoods">Low Calorie Foods</option>
   <option value="highCalorieFoods">High Calorie Foods</option>
 </select>
 
 <ul>
-  <li *ngFor="let food of childFoodList | calorie:filterByCalories">{{food.name}}
+  <li *ngFor="let food of childFoodList | calorie:filterByCalories"><span class="food-name">{{food.name}}</span>
     <ul>
       <li>Details: {{food.details}}</li>
       <li [class]="calorieFiltration(food)">{{food.calories}}</li>

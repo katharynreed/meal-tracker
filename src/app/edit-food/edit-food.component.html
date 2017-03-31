@@ -1,9 +1,9 @@
 <div *ngIf='childSelectedFood'>
   <label for='name'>Food:</label>
-  <input [(ngModel)]='childSelectedFood.name'><br/>
+  <input class="form-control" [(ngModel)]='childSelectedFood.name'><br/>
   <label for='details'>Food Details:</label>
-  <input [(ngModel)]='childSelectedFood.details'><br/>
+  <input class="form-control" [(ngModel)]='childSelectedFood.details'><br/>
   <label for='calories'>Calories:</label>
-  <input [(ngModel)]='childSelectedFood.calories'><br/>
+  <input class="form-control" [(ngModel)]='childSelectedFood.calories'><br/>
   <button class="btn btn-sm" (click)="doneButtonClicked()">Edit</button>
 </div>
