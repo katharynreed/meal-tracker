@@ -11,9 +11,9 @@ export class NewFoodComponent {
 
   newFood = false;
 
-  addFoodHasBeenClicked(food, details, calories) {
+  addFoodHasBeenClicked(name, details, calories) {
     var params = {
-      "food": food,
+      "name": name,
       "details": details,
       "calories": calories
     }
